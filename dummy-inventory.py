@@ -4,6 +4,7 @@ from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
 
 import json
+import os
 import socket
 import subprocess
 
@@ -15,6 +16,10 @@ def main():
 def inventory():
     # ip_address = find_pi()
     ip_address = "192.168.2.15"
+
+    for k, v in sorted(os.environ.items()):
+        print(k+':', v)
+    print('\n')
 
     return {
         'all': {
