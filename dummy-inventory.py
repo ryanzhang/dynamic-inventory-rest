@@ -17,14 +17,16 @@ def inventory():
     # ip_address = find_pi()
     ip_address = "192.168.2.15"
 
-    for k, v in sorted(os.environ.items()):
-        print(k+':', v)
-    print('\n')
+    #for k, v in sorted(os.environ.items()):
+    #    print(k+':', v)
+    #print('\n')
 
     return {
         'all': {
             'hosts': [ip_address],
-            'vars': {},
+            'vars': {
+                'callback_url': os.getenv('callback_url')
+            },
         },
         '_meta': {
             'hostvars': {
