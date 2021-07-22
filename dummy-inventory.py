@@ -14,7 +14,7 @@ def main():
 
 def inventory():
     # ip_address = find_pi()
-    ip_address = "192.168.2.25"
+    ip_address = "192.168.2.35"
 
     return {
         'all': {
